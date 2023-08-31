@@ -1,0 +1,105 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+  width: 100%;
+  padding: 0 20px;
+  z-index: 99;
+  background-color: #f2f7f3;
+  color: rgb(46, 41, 41);
+  border-bottom: 1px solid;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset;
+  @include md {
+    padding: 0 40px;
+  }
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    @include md {
+      height: 80px;
+    }
+  }
+  .left {
+    list-style-type: none;
+    display: none;
+    gap: 25px;
+    @include md {
+      display: flex;
+    }
+    li {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+  .center {
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    @include md {
+      font-size: 34px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include md {
+      gap: 25px;
+    }
+
+    svg {
+      font-size: 20px;
+      cursor: pointer;
+      @include md {
+        font-size: 24px;
+      }
+    }
+    .cart-icon {
+      position: relative;
+      span {
+        min-width: 20px;
+        text-align: center;
+        background-color: #8e2de2;
+        padding: 2.5px;
+        top: -5px;
+        right: -12px;
+        line-height: 1;
+        border-radius: 10px;
+        position: absolute;
+      }
+    }
+  }
+  &.sticky-header {
+    position: sticky;
+    top: 0;
+    transform: translateY(-80px);
+    animation: stickyHeader 0.3s ease forwards;
+  }
+}
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.Login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.form_help_text {
+  align-items: center;
+}

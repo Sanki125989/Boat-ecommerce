@@ -1,0 +1,111 @@
+@import "../../../css-config/mixins.scss";
+.product-card {
+  cursor: pointer;
+  width: calc(50% - 5px);
+  margin-bottom: 20px;
+  @include md {
+    width: calc(33% - 15px);
+    columns: 2;
+  }
+  .thumbnail {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    align-items: center;
+    position: relative;
+    display: block;
+
+    img {
+      transition: all ease 0.3s;
+      display: block;
+      width: 100%;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .prod-details {
+    width: 160px;
+    .rating {
+      font-size: 11px;
+    }
+    .name {
+      font-size: 14px;
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: bold;
+
+      @include md {
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+    }
+    .specs_css {
+      font-size: 13px;
+      font-weight: 100;
+      background-color: #ededed;
+      border-radius: 3px;
+      @include md {
+        font-size: 13px;
+        font-weight: 100;
+        background-color: #ededed;
+        border-radius: 3px;
+      }
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+
+      @include md {
+        font-size: 19px;
+        font-weight: bold;
+      }
+    }
+    .o_price {
+      font-size: 11px;
+      margin-left: 10px;
+      text-decoration: line-through;
+      @include md {
+        font-size: 12px;
+      }
+    }
+    .discount {
+      color: green;
+      font-size: 10px;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+
+    &:hover {
+      .thumbnail {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .loader-button__text {
+    margin-left: 95px;
+    margin-top: -51px;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    text-transform: capitalize;
+    border-radius: 12px;
+    @include md {
+      margin-left: -3px;
+      margin-top: 2px;
+      display: flex;
+      width: 168px;
+      background-color: black;
+      color: white;
+      justify-content: center;
+    }
+  }
+}

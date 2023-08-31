@@ -1,0 +1,167 @@
+.btn-form {
+  background-color: #00050a;
+  color: #fff;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 64%;
+
+  &:hover {
+    background-color: #000000;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+
+  &:active {
+    background-color: #004db3;
+  }
+}
+
+.ratings-container {
+  font-family: Arial;
+  margin: 0 auto;
+  max-width: 800px;
+  margin-bottom: 20%;
+
+  .user-rating {
+    .heading {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+    .desc {
+      float: left;
+    }
+    .fa {
+      font-size: 25px;
+    }
+
+    .checked {
+      color: orange;
+    }
+  }
+
+  .divider {
+    border: 3px solid #f1f1f1;
+  }
+
+  .ratings-bar {
+    display: block;
+
+    .rating-row {
+      float: left;
+      width: 96%;
+      margin-top: 10px;
+
+      .side {
+        float: left;
+        width: 15%;
+      }
+      .star {
+        background-color: yellow;
+      }
+
+      .middle {
+        float: left;
+        width: 70%;
+
+        .bar-container {
+          width: 19%;
+        }
+      }
+
+      .side.right {
+        text-align: right;
+      }
+    }
+
+    .bar-5 {
+      width: 60%;
+      height: 18px;
+      background-color: #04aa6d;
+    }
+
+    .bar-4 {
+      width: 30%;
+      height: 18px;
+      background-color: #2196f3;
+    }
+
+    .bar-3 {
+      width: 10%;
+      height: 18px;
+      background-color: #00bcd4;
+    }
+
+    .bar-2 {
+      width: 4%;
+      height: 18px;
+      background-color: #ff9800;
+    }
+
+    .bar-1 {
+      width: 15%;
+      height: 18px;
+      background-color: #f44336;
+    }
+  }
+
+  .review-comment {
+    margin-top: 13rem;
+    .dateCSS {
+      height: 2rem;
+    }
+  }
+  .divider {
+    border: none;
+    height: 2px;
+    background-color: rgb(182, 173, 173);
+    align-items: center;
+  }
+  .review-name {
+    font-weight: bold;
+  }
+  .sort-wrapper {
+    margin-top: 10px;
+
+    .sort-dropdown-wrapper {
+      position: relative;
+
+      .sort-dropdown {
+        font-size: 16px;
+        padding: 5px 25px 5px 10px;
+        border: 1px solid #ccc;
+        appearance: none;
+        background: url("arrow_down_icon.png") no-repeat right center;
+        background-size: 20px 20px;
+        cursor: pointer;
+      }
+
+      .sort-dropdown-arrow {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .ratings-bar .rating-row {
+      width: 100%;
+
+      .side,
+      .middle {
+        width: 100%;
+      }
+
+      .right {
+        display: none;
+      }
+    }
+  }
+}

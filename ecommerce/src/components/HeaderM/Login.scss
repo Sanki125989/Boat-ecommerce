@@ -1,0 +1,25 @@
+@import "../../css-config/mixins.scss";
+
+.heading-login {
+  flex-grow: 1;
+  margin-bottom: 0;
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+ margin-left: -10px;
+}
+.Login-form {
+  margin-top: 21px;
+  margin-left: 34px;
+  margin-right: 34px;
+}
+.paragraph {
+  text-align: center;
+  margin-top: 19px;
+}
+
+.logo {
+  width: 138px;
+  height: 70px;
+  margin-left: 110px;
+}

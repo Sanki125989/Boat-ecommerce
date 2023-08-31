@@ -1,0 +1,132 @@
+/* ReviewForm.scss */
+
+.jdgm-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+
+  label {
+    font-weight: bold;
+  }
+
+  .name,
+  .jdgm-form__email-fieldset,
+  .jdgm-form__rating-fieldset,
+  .jdgm-form__title-fieldset {
+    margin-bottom: 30px;
+  }
+
+  .name,
+  .jdgm-form__email-fieldset,
+  .jdgm-form__rating-fieldset,
+  .jdgm-form__title-fieldset ,
+  .jdgm-form__body-fieldset{
+    display: flex;
+    flex-direction: column;
+
+    input,
+    select,
+    textarea {
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #0a0101;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 14px;
+
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+    }
+
+    select {
+      cursor: pointer;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  .jdgm-form__rating {
+    display: flex;
+
+    .jdgm-star {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      margin-right: 5px;
+
+      &.jdgm--on {
+        background-image: url('./filled-star-icon.png');
+      }
+
+      &:hover {
+        background-image: url('./filled-star-icon.png');
+      }
+    }
+  }
+
+
+  .jdgm-picture-fieldset-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .jdgm-picture-fieldset {
+    display: flex;
+    align-items: center;
+
+    .jdgm-picture-fieldset__box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 120px;
+      border: 1px dashed #100000;
+      cursor: pointer;
+
+      &__box-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__icon {
+        width: 70px;
+        height: 50px;
+        background-image: url('./camera-icon.png');
+        background-size: cover;
+      }
+
+      &:hover {
+        border-color: #007bff;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+
+  .jdgm-submit-rev {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

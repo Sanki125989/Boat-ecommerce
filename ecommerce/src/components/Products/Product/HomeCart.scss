@@ -1,0 +1,249 @@
+@import "../../../css-config/mixins.scss";
+
+.home-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  justify-content: flex-end;
+}
+.home-content {
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  animation: slideCartWindow 0.3s ease forwards;
+  @include md {
+    width: 340px;
+    height: 417px;
+    margin: auto;
+    background: WHITE;
+    animation: slideCartWindow 0.3s ease forwards;
+    margin: auto;
+  }
+  .price {
+    font-size: 24px;
+    line-height: 51px;
+    margin-bottom: 20px;
+    @include md {
+      font-size: 24px;
+      line-height: 51px;
+      margin-bottom: 20px;
+    }
+  }
+  .left {
+    margin-left: 132px;
+    @include md {
+      margin-left: 3px;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-left: 166px;
+    @include md {
+      padding: 0 35px;
+      margin-left: 124px;
+      margin-top: -121px;
+      width: 233px;
+    }
+  }
+  .o_price {
+    font-size: 15px;
+    margin-left: 73px;
+    text-decoration: line-through;
+    margin-top: -51px;
+    @include md {
+      font-size: 15px;
+      margin-left: 76px;
+      margin-top: -50px;
+    }
+  }
+  .discount {
+    color: green;
+    font-size: 11px;
+    margin-left: 121px;
+    margin-top: -19px;
+    @include md {
+      color: green;
+      font-size: 11px;
+      margin-left: 123px;
+    }
+  }
+  .cart-buttons {
+    display: flex;
+    @include md {
+      margin-top: 21px;
+    }
+    .quantity-buttons {
+      width: fit-content;
+      display: flex;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      margin-left: 157px;
+      height: 50px;
+
+      @include md {
+        width: fit-content;
+        display: flex;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        margin-left: 170px;
+        height: 50px;
+      }
+      span {
+        font-size: 18px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #6b6b6b;
+        &:nth-child(1) {
+          border-right: 2px solid rgba(0, 0, 0, 0.2);
+        }
+        &:nth-child(2) {
+          width: 60px;
+        }
+        &:nth-child(3) {
+          border-left: 2px solid rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+  .span-color {
+    margin-left: 75px;
+    margin-top: 15px;
+    font-weight: bold;
+
+    @include md {
+      margin-left: 16px;
+      margin-top: 18px;
+      font-weight: bold;
+    }
+  }
+  .margin {
+    margin-left: 220px;
+    margin-top: -63px;
+    @include md {
+      margin-left: 180px;
+      margin-top: -61px;
+    }
+  }
+  .btn-small {
+    height: 30px;
+    width: 30px;
+    background-color: darkblue;
+    border-radius: 45px;
+    margin-left: 23px;
+    @include md {
+      height: 30px;
+      width: 30px;
+      background-color: darkblue;
+      border-radius: 45px;
+    }
+  }
+  .btn-lg {
+    height: 30px;
+    width: 30px;
+    border-radius: 45px;
+    margin-left: 105px;
+
+    margin-top: 16px;
+    @include md {
+      height: 30px;
+      width: 30px;
+      border-radius: 45px;
+      margin-left: 41px;
+      margin-right: 12px;
+
+      margin-top: 16px;
+    }
+  }
+  .button__text {
+    margin-left: 77px;
+    margin-top: 25px;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    text-transform: capitalize;
+    border-radius: 12px;
+    @include md {
+      margin-left: 14px;
+      margin-top: 19px;
+      margin-right: 10px;
+      display: flex;
+      background-color: black;
+      color: white;
+      justify-content: center;
+      text-transform: capitalize;
+      border-radius: 8px;
+    }
+  }
+  .button_white {
+    margin-left: 77px;
+    margin-top: 54px;
+    display: flex;
+    background-color: rgba(196, 192, 192, 0.445);
+    color: white;
+    justify-content: center;
+    text-transform: capitalize;
+    border-radius: 12px;
+    @include md {
+      margin-left: 14px;
+      margin-top: 10px;
+      margin-right: 10px;
+      display: flex;
+      background-color: rgb(165, 159, 159);
+      color: white;
+      justify-content: center;
+      text-transform: capitalize;
+      border-radius: 8px;
+    }
+  }
+}
+.home-opac-layer {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 100%;
+  height: 100%;
+}
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  .home-heading {
+    flex-grow: 1;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .home-close-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    svg {
+      font-size: 18px;
+    }
+    .home-text {
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
